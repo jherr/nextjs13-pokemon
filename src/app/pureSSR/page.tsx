@@ -1,6 +1,4 @@
-import SearchInput from "@/components/SearchInput";
-import Providers from "@/components/Provider";
-import Preloader from "@/components/Preloader";
+import SSRPokemonTable from "@/components/SSRPokemonTable";
 
 import { store } from "@/store";
 import { setStartupPokemon } from "@/store/searchSlice";
@@ -12,10 +10,7 @@ export default async function Home() {
 
   return (
     <main>
-      <Preloader pokemons={data} />
-      <Providers>
-        <SearchInput />
-      </Providers>
+      <SSRPokemonTable />
     </main>
   );
 }
